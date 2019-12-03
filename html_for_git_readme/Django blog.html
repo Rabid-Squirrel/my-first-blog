@@ -1,0 +1,96 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title> Django  blog   </title>
+        <link rel="stylesheet" href="Django%20blog_files/bootstrap.css">
+        <link rel="stylesheet" href="Django%20blog_files/bootstrap-theme.css">
+        <link href="Django%20blog_files/css.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="Django%20blog_files/blog.css">
+    </head>
+<body>
+    <div class="page-header">
+        
+            <a href="http://127.0.0.1:8000/post/new/" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        
+      <h1><a href="http://127.0.0.1:8000/">Django  blog. Funсtional : <p>groups users, </p>  <p> admin panel,</p> <p>add/del/change comments </p>  </a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+           
+    
+        <div class="post">
+            <div class="date">
+                6 ноября 2019 г. 13:22
+            </div>
+            <h1><a href="http://127.0.0.1:8000/post/2/">comment from user1 fdhhjnkljl;jhfkghd</a></h1>
+            <p>Ежедневные рекомендации, музыкальные новинки и подборки, 
+«Радио» определённого жанра или исполнителя. Возможность создавать 
+плейлисты, делиться музыкой в социальных сетях.</p>
+        </div>
+    
+        <div class="post">
+            <div class="date">
+                6 ноября 2019 г. 13:22
+            </div>
+            <h1><a href="http://127.0.0.1:8000/post/3/">comment from user2 fghjklh</a></h1>
+            <p>uyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgkuyfdiohgiudfhgiudfhjiugfjhhgjkghkhjghkjhlllllkjgklhdgk</p>
+        </div>
+    
+        <div class="post">
+            <div class="date">
+                6 ноября 2019 г. 13:24
+            </div>
+            <h1><a href="http://127.0.0.1:8000/post/6/">comment from user1 uhuhugjugjg</a></h1>
+            <p>Documentation<br>Search:<br><br>    Language: en <br><br>    Documentation version: 2.2 <br><br>Models¶<br><br>A
+ model is the single, definitive source of information about your data. 
+It contains the essential fields and behaviors of the data you’re 
+storing. Generally, each model maps to a single database table.<br><br>The basics:<br><br>    Each model is a Python class that subclasses django.db.models.Model.<br>    Each attribute of the model represents a database field.<br>    With all of this, Django gives you an automatically-generated database-access API; see Making queries.<br><br>Quick example¶<br><br>This example model defines a Person, which has a first_name and last_name:<br><br>from django.db import models<br><br>class Person(models.Model):<br>    first_name = models.CharField(max_length=30)<br>    last_name = models.CharField(max_length=30)<br><br>first_name
+ and last_name are fields of the model. Each field is specified as a 
+class attribute, and each attribute maps to a database column.<br><br>The above Person model would create a database table like this:<br><br>CREATE TABLE myapp_person (<br>    "id" serial NOT NULL PRIMARY KEY,<br>    "first_name" varchar(30) NOT NULL,<br>    "last_name" varchar(30) NOT NULL<br>);</p>
+        </div>
+    
+        <div class="post">
+            <div class="date">
+                8 ноября 2019 г. 10:57
+            </div>
+            <h1><a href="http://127.0.0.1:8000/post/7/">comment from admin gfgfhfhdhdh</a></h1>
+            <p>from django.db import models<br><br>class Musician(models.Model):<br>    first_name = models.CharField(max_length=50)<br>    last_name = models.CharField(max_length=50)<br>    instrument = models.CharField(max_length=100)<br><br>class Album(models.Model):<br>    artist = models.ForeignKey(Musician, on_delete=models.CASCADE)<br>    name = models.CharField(max_length=100)<br>    release_date = models.DateField()<br>    num_stars = models.IntegerField()</p>
+        </div>
+    
+        <div class="post">
+            <div class="date">
+                8 ноября 2019 г. 10:58
+            </div>
+            <h1><a href="http://127.0.0.1:8000/post/8/">comment from admin dsssss</a></h1>
+            <p>The first element in each tuple is the value that will be
+ stored in the database. The second element is displayed by the field’s 
+form widget.<br><br>Given a model instance, the display value for a 
+field with choices can be accessed using the get_FOO_display() method. 
+For example:<br><br>from django.db import models<br><br>class Person(models.Model):<br>    SHIRT_SIZES = (<br>        ('S', 'Small'),<br>        ('M', 'Medium'),<br>        ('L', 'Large'),<br>    )<br>    name = models.CharField(max_length=60)<br>    shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)</p>
+        </div>
+    
+        <div class="post">
+            <div class="date">
+                8 ноября 2019 г. 10:58
+            </div>
+            <h1><a href="http://127.0.0.1:8000/post/9/">comment from user2</a></h1>
+            <p>Automatic primary key fields¶<br><br>By default, Django gives each model the following field:<br><br>id = models.AutoField(primary_key=True)<br><br>This is an auto-incrementing primary key.<br><br>If
+ you’d like to specify a custom primary key, just specify 
+primary_key=True on one of your fields. If Django sees you’ve explicitly
+ set Field.primary_key, it won’t add the automatic id column.<br><br>Each model requires exactly one field to have primary_key=True (either explicitly declared or automatically added).</p>
+        </div>
+    
+        <div class="post">
+            <div class="date">
+                8 ноября 2019 г. 11:03
+            </div>
+            <h1><a href="http://127.0.0.1:8000/post/1/">comment from admin wp[;=]'</a></h1>
+            <p>Microsoft Windows [Version 10.0.18362.418]<br>(c) Корпорация Майкрософт (Microsoft Corporation), 2019. Все права защищены.</p>
+        </div>
+    
+
+            </div>
+        </div>
+    </div>
+
+</body></html>
